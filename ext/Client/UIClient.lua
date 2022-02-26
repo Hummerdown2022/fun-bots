@@ -292,10 +292,10 @@ function FunBotUIClient:OnClientUpdateInput(p_DeltaTime)
 			NetEvents:Send('UI_Request_Open')
 		end
 		return
-	elseif InputManager:WentKeyUp(InputDeviceKeys.IDK_LeftAlt) and self.m_InWaypointEditor then
+	elseif InputManager:WentKeyUp(InputDeviceKeys.IDK_B) and self.m_InWaypointEditor then
 		self._views:enable()
 		self.m_LastWaypointEditorState = true
-	elseif InputManager:WentKeyDown(InputDeviceKeys.IDK_LeftAlt) and self.m_InWaypointEditor then
+	elseif InputManager:WentKeyDown(InputDeviceKeys.IDK_B) and self.m_InWaypointEditor then
 		self._views:disable()
 		self.m_LastWaypointEditorState = false
 	elseif InputManager:WentKeyDown(Registry.COMMON.BOT_COMMAND_KEY) and not self.m_InWaypointEditor and not self.m_InCommScreen and not self.m_WaitForKeyLeft then
